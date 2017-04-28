@@ -47,6 +47,7 @@ class MenuController
   end
 
   def view_all_entries
+
     address_book.entries.each do |entry|
       system "clear"
       puts entry.to_s
@@ -54,6 +55,7 @@ class MenuController
     end
 
     system "clear"
+    # puts address_book.entries.count
     puts "End of entries"
   end
 
@@ -76,6 +78,7 @@ class MenuController
   end
 
   def read_csv
+    @address_book.import_from_csv("./entries.csv")
   end
 
   def entry_submenu(entry)
