@@ -89,7 +89,7 @@ class MenuController
 
   def read_csv
     print "Enter CSV file to import: "
-    fine_name = gets.chomp
+    file_name = gets.chomp
 
     if file_name.empty?
       system "clear"
